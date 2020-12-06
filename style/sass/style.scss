@@ -1,0 +1,45 @@
+@import "variable";
+@import "reset";
+@import "base";
+.page {
+  .page__header {
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    background-color: $primary;
+    color: white;
+    .header__logo {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+    }
+    .hamburger {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      .hamburger__span {
+        display: block;
+        width: 40px;
+        height: 7px;
+        background-color: white;
+        margin-bottom: 5px;
+        border-radius: 9px;
+        top: 20px;
+      }
+    }
+  }
+  .page__main {
+    z-index: -1;
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 90vh;
+    background-color: yellow;
+
+    //dodać media
+  }
+}
