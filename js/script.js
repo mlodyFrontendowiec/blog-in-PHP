@@ -1,0 +1,2 @@
+new Hamburger();
+new deleteSection();

@@ -10,4 +10,3 @@ class deleteSection {
     });
   }
 }
-new deleteSection();

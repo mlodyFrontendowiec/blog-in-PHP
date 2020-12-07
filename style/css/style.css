@@ -14,14 +14,14 @@
   overflow: hidden;
 }
 
-.page .page__header {
+.page__header {
   position: fixed;
   width: 100%;
   height: 10vh;
   background-color: #3500d3;
 }
 
-.page .page__header .header__link {
+.page__header .header__link {
   color: white;
   text-decoration: none;
   position: absolute;
@@ -31,7 +31,7 @@
           transform: translateY(-50%);
 }
 
-.page .page__header .hamburger {
+.page__header .hamburger {
   position: absolute;
   right: 5%;
   top: 50%;
@@ -40,7 +40,7 @@
   cursor: pointer;
 }
 
-.page .page__header .hamburger .hamburger__span {
+.page__header .hamburger .hamburger__span {
   display: block;
   width: 40px;
   height: 7px;
@@ -50,7 +50,7 @@
   top: 20px;
 }
 
-.page .page__main {
+.page .main {
   z-index: -1;
   position: absolute;
   top: 10vh;
@@ -62,12 +62,12 @@
   width: 100%;
 }
 
-.page .page__main .main__title {
+.page .main__title {
   color: #3500d3;
   text-align: center;
 }
 
-.page .page__main .main__welcome {
+.page .main__welcome {
   width: 100%;
   height: 10%;
   display: -webkit-box;
@@ -82,7 +82,7 @@
           justify-content: center;
 }
 
-.page .page__main .main__delete {
+.page .main__delete {
   width: 20px;
   height: 20px;
   background-color: #3500d3;
@@ -101,7 +101,7 @@
   cursor: pointer;
 }
 
-.page .page__main .main__aside {
+.page .main__aside {
   position: fixed;
   right: -30vw;
   top: 0;
@@ -115,19 +115,19 @@
 }
 
 @media (max-width: 764px) {
-  .page .page__main .main__aside {
+  .page .main__aside {
     width: 100vw;
     right: -100vw;
   }
 }
 
-.page .page__main .main__aside.main__aside--active {
+.page .main__aside.main__aside--active {
   right: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.page .page__main .nav__container {
+.page .main .nav__container {
   width: 80%;
   height: 40%;
   position: absolute;
@@ -151,10 +151,46 @@
           align-items: center;
 }
 
-.page .page__main .nav__link {
+.page .main .nav__link {
   font-size: 30px;
   text-decoration: none;
   color: #3500d3;
   font-weight: 600;
+}
+
+.page .main .article {
+  width: 80%;
+  height: 20%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: 2px solid #3500d3;
+  padding: 10px;
+  margin-top: 15px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.page .main .article__title {
+  color: #3500d3;
+  margin: 5px 0 5px;
+}
+
+.page .main .article:hover {
+  -webkit-transform: translateX(-50%) scale(1.15);
+          transform: translateX(-50%) scale(1.15);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.page .main .article__link {
+  text-decoration: none;
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  padding: 5px;
+  background-color: #3500d3;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

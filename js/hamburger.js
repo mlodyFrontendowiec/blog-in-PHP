@@ -10,4 +10,3 @@ class Hamburger {
     });
   }
 }
-const hamburger = new Hamburger();
