@@ -1,6 +1,7 @@
 @import "variable";
 @import "reset";
 @import "base";
+
 .page {
   overflow: hidden;
   &__header {
@@ -8,6 +9,7 @@
     width: 100%;
     height: 10vh;
     background-color: $primary;
+
     .header__link {
       color: white;
       text-decoration: none;
@@ -16,6 +18,15 @@
       left: 5%;
       transform: translateY(-50%);
     }
+    .header__logo-info {
+      color: white;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      font-size: 22px;
+    }
+
     .hamburger {
       position: absolute;
       right: 5%;

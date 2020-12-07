@@ -31,6 +31,16 @@
           transform: translateY(-50%);
 }
 
+.page__header .header__logo-info {
+  color: white;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  font-size: 22px;
+}
+
 .page__header .hamburger {
   position: absolute;
   right: 5%;
