@@ -51,6 +51,10 @@ class Controller
             case "failLogin":
                 $this->view->render("admin/loginAdmin");
             break;
+            case "addContent":
+                
+                $this->model->addContent($this->post);
+            break;
         }
     }
 }

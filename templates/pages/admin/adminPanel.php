@@ -10,22 +10,23 @@
 
 <body class="page">
 
-    <main class="page__main main">
-        <form action="/?action=validateLogin" method="POST" class="form">
-            <?php if ($_GET["action"]=="failLogin"):?>
-            <p class="form__fail">Niepoprawny login lub hasło</p>
-            <?php endif;?>
-            <h2 class="form__title">Zaloguj się do panelu admina</h2>
-            <label class="form__label">Login:<input type="text" class="form__input" required placeholder="login"
-                    name="login" /></label>
-            <label class="form__label">Hasło:<input class="form__input" type="password" required placeholder="password"
-                    name="password" /></label>
-            <input class="form__button" type="submit" value="Zaloguj" />
+    <section class="section">
+        <h1 class="section__header">Add new contnent</h1>
+        <form class="section__form" action="/?action=addContent" method="POST">
+            <label class="section__label">Type:
+                <select name="type" id="cars" class="section__input">
+                    <option value="article">article</option>
+                    <option value="post">post</option>
+                    <option value="review">review</option>
+                    <option value="interview">interview</option>
+                </select>
+            </label>
+            <label class="section__label">Title:<input class="section__input" name="title" type="text" /></label>
+            <label class="section__label">Content:<br /><textarea name="content" cols="30" rows="10"
+                    class="section__textarea"></textarea> <br /><input type="submit" value="Add"
+                    class="section__submit" /></label>
         </form>
-    </main>
-    <script src="/js/hamburger.js"></script>
-    <script src="/js/delete.js"></script>
-    <script src="/js/script.js"></script>
+    </section>
 </body>
 
 </html>

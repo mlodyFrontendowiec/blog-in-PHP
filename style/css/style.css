@@ -74,6 +74,12 @@
   width: 100%;
 }
 
+.page .main__header {
+  color: #3500d3;
+  text-align: center;
+  margin-top: -60px;
+}
+
 .page .main__title {
   color: #3500d3;
   text-align: center;
@@ -278,5 +284,95 @@
 .page .main .form__button:hover {
   background-color: #3500d3;
   color: white;
+}
+
+.page .section {
+  margin-top: 20px;
+  border: 2px solid #3500d3;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (min-width: 1024px) {
+  .page .section {
+    width: 40%;
+  }
+}
+
+.page .section__header {
+  color: #3500d3;
+  font-size: 30px;
+}
+
+.page .section__input {
+  padding: 10px 15px;
+  font-size: 18px;
+  color: #3500d3;
+}
+
+.page .section__textarea {
+  color: #3500d3;
+  padding: 10px;
+  font-size: 16px;
+  resize: none;
+}
+
+.page .section__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.page .section__label {
+  display: block;
+  font-size: 20px;
+  color: #3500d3;
+  padding: 10px;
+}
+
+.page .section__submit {
+  padding: 8px 15px;
+  font-size: 15px;
+  color: #3500d3;
+  background-color: white;
+  margin-top: 10px;
+  border: 2px solid #3500d3;
+  cursor: pointer;
+  position: absolute;
+  right: 25%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.page .section__submit:hover {
+  color: white;
+  background-color: #3500d3;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 /*# sourceMappingURL=style.css.map */
