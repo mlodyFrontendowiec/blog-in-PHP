@@ -123,19 +123,19 @@
       height: 20%;
       position: absolute;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translateX(-50%) scale(1);
       border: 2px solid $primary;
       padding: 10px;
       margin-top: 15px;
-      transition: 0.3s;
+      transition: transform 0.3s;
 
       &__title {
         color: $primary;
         margin: 5px 0 5px;
       }
       &:hover {
-        transform: translateX(-50%) scale(1.15);
-        transition: 0.3s;
+        transform: translateX(-50%) scale(1.1);
+        transition: transform 0.3s;
       }
       &__link {
         text-decoration: none;
@@ -143,6 +143,55 @@
         bottom: 10px;
         right: 12px;
         padding: 5px;
+        background-color: $primary;
+        color: white;
+      }
+    }
+    .form {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      // width: 60%;
+      width: 60vw;
+      font-size: 11px;
+      height: 35%;
+      border: 2px solid $primary;
+      color: $primary;
+      margin: 50px auto;
+      justify-content: space-evenly;
+      @media (min-width: 1024px) {
+        width: 40vw;
+        font-size: 16px;
+      }
+      &__fail {
+        color: red;
+      }
+      &__input {
+        width: 40vw;
+        padding: 10px;
+        margin-left: 5px;
+        font-size: 20px;
+        color: $primary;
+        @media (min-width: 1024px) {
+          width: 20vw;
+        }
+      }
+      &__label {
+        font-size: 20px;
+        color: $primary;
+      }
+      &__button {
+        padding: 8px 15px;
+        margin-top: 20px;
+        font-size: 15px;
+        background-color: white;
+        border: 2px solid $primary;
+        cursor: pointer;
+        color: $primary;
+        transition: 0.3s;
+      }
+      &__button:hover {
         background-color: $primary;
         color: white;
       }

@@ -24,6 +24,12 @@
             case "reviewPage":
                 echo "<h1 class='header__logo-info'>Review</h1>";
             break;
+            case "admin/loginAdmin":
+                echo "<h1 class='header__logo-info'>Sign in</h1>";
+            break;
+            case "admin/adminPanel":
+                echo "<h1 class='header__logo-info'>Sign in</h1>";
+            break;
             default:
             break;
 
