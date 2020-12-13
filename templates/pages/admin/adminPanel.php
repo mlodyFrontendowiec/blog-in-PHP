@@ -9,7 +9,8 @@
 </head>
 
 <body class="page">
-
+    <?php session_start()?>
+    <?php if (isset($_SESSION["acces"])) :?>
     <section class="section">
         <h1 class="section__header">Add new contnent</h1>
         <form class="section__form" action="/?action=addContent" method="POST">
@@ -27,6 +28,10 @@
                     class="section__submit" /></label>
         </form>
     </section>
+    <?php session_destroy();?>
+    <?php else:?>
+    <h1 class="section__error">Brak autoryzacji</h1>
+    <?php endif;?>
 </body>
 
 </html>

@@ -36,13 +36,40 @@
         }
         ?>
         <h1 class="header__logo"><a class="header__link" href="/">BlogIT</a></h1>
+        <?php if (isset($_GET["action"]) && $_GET["action"]=="loginAdmin"):?>
+
+        <?php else:?>
         <div class="header__hamburger hamburger">
             <span class="hamburger__span"></span>
             <span class="hamburger__span"></span>
             <span class="hamburger__span"></span>
         </div>
+        <?php endif;?>
     </header>
     <main class="page__main main">
+        <?php if (isset($_GET["action"]) && $_GET["action"]==="adminPanel" && ($_COOKIE['login'] === 'true')):?>
+        <aside class="main__aside">
+            <nav class="main__nav nav">
+                <ul class="nav__container">
+                    <li class="nav__link-container">
+                        <a class="nav__link" href="/?action=logoutAdmin">Log out</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <?php require_once("pages/$page.php")?>
+        <?php elseif (isset($_GET["action"]) && $_GET["action"]==="adminPanel" && ($_COOKIE['login'] === 'false')):?>
+        <aside class="main__aside">
+            <nav class="main__nav nav">
+                <ul class="nav__container">
+                    <li class="nav__link-container">
+                        <a class="nav__link" href="/?action=loginAdmin">Sign in</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <?php require_once("pages/$page.php")?>
+        <?php else:?>
         <aside class="main__aside">
             <nav class="main__nav nav">
                 <ul class="nav__container">
@@ -65,6 +92,8 @@
             </nav>
         </aside>
         <?php require_once("pages/$page.php")?>
+        <?php endif;?>
+
     </main>
     <script src="/js/hamburger.js"></script>
     <script src="/js/delete.js"></script>

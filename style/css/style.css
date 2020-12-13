@@ -316,6 +316,12 @@
   }
 }
 
+.page .section__error {
+  color: #3500d3;
+  text-align: center;
+  margin-top: 10px;
+}
+
 .page .section__header {
   color: #3500d3;
   font-size: 30px;

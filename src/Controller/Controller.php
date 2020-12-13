@@ -51,8 +51,10 @@ class Controller
             case "failLogin":
                 $this->view->render("admin/loginAdmin");
             break;
+            case "logoutAdmin":
+                $this->model->logoutAdmin();
+            break;
             case "addContent":
-                
                 $this->model->addContent($this->post);
             break;
         }

@@ -217,6 +217,11 @@
     @media (min-width: 1024px) {
       width: 40%;
     }
+    &__error {
+      color: $primary;
+      text-align: center;
+      margin-top: 10px;
+    }
     &__header {
       color: $primary;
       font-size: 30px;

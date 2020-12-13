@@ -9,7 +9,6 @@
 </head>
 
 <body class="page">
-
     <main class="page__main main">
         <form action="/?action=validateLogin" method="POST" class="form">
             <?php if ($_GET["action"]=="failLogin"):?>
