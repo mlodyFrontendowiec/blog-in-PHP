@@ -25,7 +25,8 @@ class Controller
     {
         switch ($this->get['action']  ?? "mainPage") {
             case "mainPage":
-                $this->view->render("mainPage");
+                $data = $this->model->getData('article');
+                $this->view->render("mainPage", $data);
                 setcookie("login", "false");
             break;
             case "articlesPage":
@@ -33,13 +34,16 @@ class Controller
                 $this->view->render("articlesPage", $data);
             break;
             case "postPage":
-                $this->view->render("postPage");
+                $data = $this->model->getData('post');
+                $this->view->render("postPage", $data);
             break;
             case "reviewPage":
-                $this->view->render("reviewPage");
+                $data = $this->model->getData('review');
+                $this->view->render("reviewPage", $data);
             break;
             case "interviewPage":
-                $this->view->render("interviewPage");
+                $data = $this->model->getData('interview');
+                $this->view->render("interviewPage", $data);
             break;
             case "loginAdmin":
                 $this->view->render("admin/loginAdmin");

@@ -1,11 +1,18 @@
-
 <article class="article">
-    <h1 class="article__title">Most Popular Browsers</h1>
+    <h1 class="article__title">Welcome to my blog</h1>
     <p class="article__content">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea officia,
-        perferendis dolores, fuga nostrum voluptate quam, eaque blanditiis
-        quas praesentium debitis. Aliquam alias, harum distinctio ipsam
-        eligendi provident voluptate repellendus?
+        Hello, My name is Paul. I am interseted in frontend and backend development. In this project I am using such
+        technolgies as HTML, SASS, JavaScript, PHP. Wait for more content :)
     </p>
-    <a class="article__link" href="/">Czytaj więcej...</a>
+
 </article>
+<?php foreach ($data as $item):?>
+<article class="article">
+    <h1 class="article__title"><?php echo $item[1]?>
+    </h1>
+    <p class="article__content">
+        <?php echo $item[2]?>
+    </p>
+    <a class="article__link" href="/">Read more...</a>
+</article>
+<?php endforeach;
