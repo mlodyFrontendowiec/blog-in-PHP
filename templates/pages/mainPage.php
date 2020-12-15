@@ -1,9 +1,3 @@
-<div class="main__welcome main__welcome--delete">
-    <h1 class="main__title">Welcome to our blog!</h1>
-    <div class="main__delete">
-        <p class="main__delete-x">x</p>
-    </div>
-</div>
 
 <article class="article">
     <h1 class="article__title">Most Popular Browsers</h1>

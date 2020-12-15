@@ -12,12 +12,14 @@ class Model
     public function requestLogin($POST):void
     {
         session_start();
+        setcookie("login", "false");
         $password = $POST["password"];
         $login = $POST["login"];
         $res = mysqli_query($this->mysqli, "SELECT * FROM admins WHERE login = '$login'");
        
         $row = mysqli_fetch_assoc($res);
         if (!$row["password"]) {
+            setcookie("login", "false");
             header("Location: /?action=failLogin");
             session_destroy();
         }
@@ -28,6 +30,7 @@ class Model
             setcookie("login", "true");
             header("Location: /?action=adminPanel");
         } else {
+            setcookie("login", "false");
             header("Location: /?action=failLogin");
             session_destroy();
         }
@@ -47,5 +50,12 @@ class Model
         $content = $POST["content"];
         mysqli_query($this->mysqli, "INSERT INTO $type(title,content) VALUES ('$title','$content')");
         header("Location: /?action=adminPanel");
+    }
+    public function getData(string $type):array
+    {
+        $res =  mysqli_query($this->mysqli, "SELECT * FROM $type");
+        $rows = mysqli_fetch_all($res);
+
+        return $rows;
     }
 }

@@ -26,9 +26,11 @@ class Controller
         switch ($this->get['action']  ?? "mainPage") {
             case "mainPage":
                 $this->view->render("mainPage");
+                setcookie("login", "false");
             break;
             case "articlesPage":
-                $this->view->render("articlesPage");
+                $data = $this->model->getData('article');
+                $this->view->render("articlesPage", $data);
             break;
             case "postPage":
                 $this->view->render("postPage");
