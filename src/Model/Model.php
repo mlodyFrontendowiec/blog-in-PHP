@@ -11,6 +11,7 @@ class Model
     }
     public function requestLogin($POST):void
     {
+        ini_set("session.gc_maxlifetime", "60");
         session_start();
         setcookie("login", "false");
         $password = $POST["password"];
@@ -21,7 +22,6 @@ class Model
         if (!$row["password"]) {
             setcookie("login", "false");
             header("Location: /?action=failLogin");
-            session_destroy();
         }
 
         if (password_verify($password, $row["password"])) {
@@ -32,7 +32,6 @@ class Model
         } else {
             setcookie("login", "false");
             header("Location: /?action=failLogin");
-            session_destroy();
         }
     }
     public function logoutAdmin()
@@ -45,11 +44,14 @@ class Model
     }
     public function addContent(array $POST):void
     {
-        $type = $POST["type"];
-        $title = $POST["title"];
-        $content = $POST["content"];
-        mysqli_query($this->mysqli, "INSERT INTO $type(title,content) VALUES ('$title','$content')");
-        header("Location: /?action=adminPanel");
+        session_start();
+        if ($_SESSION['acces'] == 1) {
+            $type = $POST["type"];
+            $title = $POST["title"];
+            $content = $POST["content"];
+            mysqli_query($this->mysqli, "INSERT INTO $type(title,content) VALUES ('$title','$content')");
+            header("Location: /?action=adminPanel");
+        }
     }
     public function getData(string $type):array
     {

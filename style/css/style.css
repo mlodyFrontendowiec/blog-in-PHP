@@ -234,9 +234,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 60vw;
+  width: 80vw;
   font-size: 11px;
-  height: 35%;
+  height: 100%;
   border: 2px solid #3500d3;
   color: #3500d3;
   margin: 50px auto;
@@ -244,6 +244,7 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   z-index: 1;
+  padding: 20px 40px;
 }
 
 @media (min-width: 1024px) {
@@ -274,6 +275,7 @@
 .page .main .form__label {
   font-size: 20px;
   color: #3500d3;
+  padding: 10px;
 }
 
 .page .main .form__button {

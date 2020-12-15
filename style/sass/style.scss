@@ -159,14 +159,15 @@
       display: flex;
       align-items: center;
       flex-direction: column;
-      width: 60vw;
+      width: 80vw;
       font-size: 11px;
-      height: 35%;
+      height: 100%;
       border: 2px solid $primary;
       color: $primary;
       margin: 50px auto;
       justify-content: space-evenly;
       z-index: 1;
+      padding: 20px 40px;
 
       @media (min-width: 1024px) {
         width: 40vw;
@@ -188,6 +189,7 @@
       &__label {
         font-size: 20px;
         color: $primary;
+        padding: 10px;
       }
       &__button {
         padding: 8px 15px;
