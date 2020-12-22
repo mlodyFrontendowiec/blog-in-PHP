@@ -11,7 +11,6 @@ class Model
     }
     public function requestLogin($POST):void
     {
-        ini_set("session.gc_maxlifetime", "60");
         session_start();
         setcookie("login", "false");
         $password = $POST["password"];
@@ -57,7 +56,6 @@ class Model
     {
         $res =  mysqli_query($this->mysqli, "SELECT * FROM $type");
         $rows = mysqli_fetch_all($res);
-
         return $rows;
     }
 }
